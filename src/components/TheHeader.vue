@@ -78,75 +78,86 @@ export default {
 
           <!-- Terza Nav -->
           <div class="nav-tertiary d-flex align-items-center py-3">
-            <!-- primo dropdown -->
-            <div class="dropdown">
-              <button
-                class="btn btn-secondary dropdown-toggle text-white bg-transparent border-0 hover-green fw-bold fs-5"
-                type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Home
+            <div class="d-flex align-items-center">
+              <!-- primo dropdown -->
+              <div class="dropdown">
+                <button
+                  class="btn btn-secondary dropdown-toggle text-white bg-transparent border-0 hover-green fw-bold fs-5"
+                  type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Home
+                </button>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li v-for="homeElement in store.headerHomeUl"><a class="dropdown-item" href="#">{{ homeElement }}</a>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- secondo dropdown -->
+              <div class="dropdown">
+                <button
+                  class="btn btn-secondary dropdown-toggle text-white bg-transparent border-0 hover-green fw-bold fs-5"
+                  type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Celebrity
+                </button>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li v-for="celebrityElement in store.headerCelebrityUl"><a class="dropdown-item" href="#">{{
+                    celebrityElement }}</a></li>
+                </ul>
+              </div>
+
+              <!-- terzo dropdown -->
+              <div class="dropdown">
+                <button
+                  class="btn btn-secondary dropdown-toggle text-white bg-transparent border-0 hover-green fw-bold fs-5"
+                  type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Movie
+                </button>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li v-for="movieElement in store.headerMovieUl"><a class="dropdown-item" href="#">{{ movieElement }}</a>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- quarto dropdown -->
+              <div class="dropdown">
+                <button
+                  class="btn btn-secondary dropdown-toggle text-white bg-transparent border-0 hover-green fw-bold fs-5"
+                  type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Page
+                </button>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li v-for="pageElement in store.headerPageUl"><a class="dropdown-item" href="#">{{ pageElement }}</a>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- quinto dropdown -->
+              <div class="dropdown">
+                <button
+                  class="btn btn-secondary dropdown-toggle text-white bg-transparent border-0 hover-green fw-bold fs-5"
+                  type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Shop
+                </button>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li v-for="shopElement in store.headerShopUl"><a class="dropdown-item" href="#">{{ shopElement }}</a>
+                  </li>
+                </ul>
+              </div>
+
+              <button class="btn btn-secondary text-white bg-transparent border-0 hover-green fw-bold fs-5" type="button">
+                Blog
               </button>
-              <ul class="dropdown-menu dropdown-menu-dark">
-                <li v-for="homeElement in store.headerHomeUl"><a class="dropdown-item" href="#">{{ homeElement }}</a></li>
-              </ul>
+
+              <button class="btn btn-secondary text-white bg-transparent border-0 hover-green fw-bold fs-5" type="button">
+                Contact Us
+              </button>
             </div>
 
-            <!-- secondo dropdown -->
-            <div class="dropdown">
-              <button
-                class="btn btn-secondary dropdown-toggle text-white bg-transparent border-0 hover-green fw-bold fs-5"
-                type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Celebrity
-              </button>
-              <ul class="dropdown-menu dropdown-menu-dark">
-                <li v-for="celebrityElement in store.headerCelebrityUl"><a class="dropdown-item" href="#">{{
-                  celebrityElement }}</a></li>
-              </ul>
+            <div class="position-relative ms-auto">
+              <a href="#"><i class="fa-solid fa-basket-shopping text-white hover-green"></i></a>
+              <span
+                class="header-cart position-absolute top-0 start-100 translate-middle bg-green-primary rounded-circle text-white">0</span>
             </div>
-
-            <!-- terzo dropdown -->
-            <div class="dropdown">
-              <button
-                class="btn btn-secondary dropdown-toggle text-white bg-transparent border-0 hover-green fw-bold fs-5"
-                type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Movie
-              </button>
-              <ul class="dropdown-menu dropdown-menu-dark">
-                <li v-for="movieElement in store.headerMovieUl"><a class="dropdown-item" href="#">{{ movieElement }}</a>
-                </li>
-              </ul>
-            </div>
-
-            <!-- quarto dropdown -->
-            <div class="dropdown">
-              <button
-                class="btn btn-secondary dropdown-toggle text-white bg-transparent border-0 hover-green fw-bold fs-5"
-                type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Page
-              </button>
-              <ul class="dropdown-menu dropdown-menu-dark">
-                <li v-for="pageElement in store.headerPageUl"><a class="dropdown-item" href="#">{{ pageElement }}</a></li>
-              </ul>
-            </div>
-
-            <!-- quinto dropdown -->
-            <div class="dropdown">
-              <button
-                class="btn btn-secondary dropdown-toggle text-white bg-transparent border-0 hover-green fw-bold fs-5"
-                type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Shop
-              </button>
-              <ul class="dropdown-menu dropdown-menu-dark">
-                <li v-for="shopElement in store.headerShopUl"><a class="dropdown-item" href="#">{{ shopElement }}</a></li>
-              </ul>
-            </div>
-
-            <button class="btn btn-secondary text-white bg-transparent border-0 hover-green fw-bold fs-5" type="button">
-              Blog
-            </button>
-
-            <button class="btn btn-secondary text-white bg-transparent border-0 hover-green fw-bold fs-5" type="button">
-              Contact Us
-            </button>
           </div>
         </div>
       </div>
@@ -156,17 +167,10 @@ export default {
 
 <style lang="scss" scoped>
 @use '../styles/partials/variables.scss' as *;
+@use '../styles/partials/utilities.scss' as *;
 
 .container-fluid {
   background-color: $bg-header;
-}
-
-.green-primary {
-  color: $green-primary;
-}
-
-.bg-green-primary {
-  background-color: $green-primary;
 }
 
 .hover-green {
@@ -190,4 +194,10 @@ hr {
   color: lightgrey;
   margin: 0;
   margin-left: -50%;
-}</style>
+}
+
+.header-cart {
+  font-size: .8rem;
+  padding: 0rem .35rem;
+}
+</style>

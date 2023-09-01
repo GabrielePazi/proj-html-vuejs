@@ -1,0 +1,9 @@
+@use 'variables.scss' as *;
+
+.green-primary {
+  color: $green-primary;
+}
+
+.bg-green-primary {
+  background-color: $green-primary;
+}
