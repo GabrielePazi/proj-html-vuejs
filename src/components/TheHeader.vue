@@ -42,9 +42,10 @@ export default {
               </a>
             </div>
           </div>
+        </div>
 
-          <hr>
-
+        <hr>
+        <div class="col-9">
           <!-- Nav grande -->
           <div class="nav-secondary d-flex align-items-center mt-4 mb-5">
             <div>
@@ -73,9 +74,11 @@ export default {
               </div>
             </div>
           </div>
+        </div>
 
-          <hr>
+        <hr>
 
+        <div class="col-9">
           <!-- Terza Nav -->
           <div class="nav-tertiary d-flex align-items-center py-3">
             <div class="d-flex align-items-center">
@@ -190,10 +193,8 @@ export default {
 }
 
 hr {
-  width: 150vw;
+  width: 100vw;
   color: lightgrey;
-  margin: 0;
-  margin-left: -50%;
 }
 
 .header-cart {

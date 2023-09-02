@@ -7,3 +7,23 @@
 .bg-green-primary {
   background-color: $green-primary;
 }
+
+.bg-main {
+  background-color: $bg-header;
+}
+
+.hover-green {
+  transition: color .5s;
+
+  &:hover {
+    color: $green-primary !important;
+  }
+}
+
+.hover-bg-green {
+  transition: background-color .5s;
+
+  &:hover {
+    background-color: $green-primary !important;
+  }
+}

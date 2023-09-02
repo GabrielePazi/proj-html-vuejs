@@ -16,14 +16,26 @@ export default {
 </script>
 
 <template>
-  <TheHeader></TheHeader>
+    <TheHeader></TheHeader>
 
   <main>
     <TheJumbo></TheJumbo>
+    <TheMain></TheMain>
   </main>
 </template>
 
 <style lang="scss">
+@use './styles/partials/variables.scss' as *;
+@use './styles/partials/utilities.scss' as *;
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  background-color: $bg-header;
+}
 
 </style>
