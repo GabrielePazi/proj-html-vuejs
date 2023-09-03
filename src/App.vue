@@ -22,6 +22,8 @@ export default {
     <TheJumbo></TheJumbo>
     <TheMain></TheMain>
   </main>
+
+  <TheFooter></TheFooter>
 </template>
 
 <style lang="scss">

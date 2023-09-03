@@ -1,4 +1,4 @@
-import {reactive} from 'vue';
+import { reactive } from 'vue';
 
 export const store = reactive({
   headerHomeUl: [
@@ -30,5 +30,21 @@ export const store = reactive({
   headerShopUl: [
     "Shop Sidebar",
     "No Sidebar",
+  ],
+  footerCategoryUl: [
+    "English New Movie",
+    "Hindi All Movie",
+    "Latest Tamil Movie",
+    "New Top Rating Movie",
+    "Hornn New Movie",
+    "Animation New Movie"
+  ],
+  footerInfoUl: [
+    "Youtube Video Post",
+    "Actor Information",
+    "New Promotion",
+    "Latest Movie In English",
+    "Latest Film Production",
+    "Video New Video"
   ]
 })
