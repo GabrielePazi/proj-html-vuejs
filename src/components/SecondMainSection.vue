@@ -17,19 +17,6 @@ export default {
               <h4>Movie Playlist</h4>
               <p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
             </div>
-
-            <div class="d-flex ms-auto">
-              <div class="h-100 d-flex align-items-center text-white">
-                <button class="btn-slider bg-transparent border-0 rounded-circle p-2">
-                  <i class="fa-solid fa-chevron-left text-white hover-green fs-4 px-2"></i>
-                </button>
-              </div>
-              <div class="h-100 d-flex align-items-center text-white">
-                <button class="btn-slider bg-transparent border-0 rounded-circle p-2">
-                  <i class="fa-solid fa-chevron-right text-white hover-green fs-4 px-2"></i>
-                </button>
-              </div>
-            </div>
           </div>
 
           <!-- schermata con video youtube e consigliati -->

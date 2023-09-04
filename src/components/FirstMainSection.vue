@@ -73,6 +73,10 @@ export default {
               <button
                 class="views-btn position-absolute bg-main hover-bg-green text-white fw-medium rounded-start-5 border-0 py-2 ps-3 pe-3">1037
                 Views</button>
+              <div
+                class="movie-duration-banner position-absolute bg-green-primary text-white rounded-end-5 p-2 text-center">
+                <p class="m-0">2.30.00</p>
+              </div>
             </div>
 
             <!-- CARD 3 -->
@@ -106,6 +110,16 @@ export default {
 <style lang="scss" scoped>
 @use '../styles/partials/variables.scss' as *;
 @use '../styles/partials/utilities.scss' as *;
+
+.movie-duration-banner {
+  top: 5%;
+  left: -200px;
+  transition: left .5s;
+}
+
+.card-active:hover .movie-duration-banner {
+  left: 0;
+}
 
 .btn-slider {
   aspect-ratio: 1/1;
